@@ -21,12 +21,7 @@ public class Main {
         // ignore first line
         inputFileNameScanner.nextLine();
 
-        // TODO obtain parsing keywords (country, variant) for selecting lines
-        System.out.println("Country: ");
-        String country = scnr.nextLine();
-
-        System.out.println("Variant: ");
-        String variant = scnr.nextLine();
+        // TODO: obtain parsing keywords (country, variant) for selecting lines
 
         while (inputFileNameScanner.hasNext()) {
             String line = inputFileNameScanner.nextLine();
