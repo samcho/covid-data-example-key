@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Main {
+public class Covid_key {
 
     public static void main(String[] args) throws IOException {
         Scanner scnr = new Scanner(System.in);
@@ -22,12 +22,20 @@ public class Main {
         inputFileNameScanner.nextLine();
 
         // TODO: obtain parsing keywords (country, variant) for selecting lines
+        System.out.println("Which country?: ");
+        String country = scnr.nextLine();
+
+        System.out.println("Which variant?: ");
+        String variant = scnr.nextLine();
 
         while (inputFileNameScanner.hasNext()) {
             String line = inputFileNameScanner.nextLine();
             String[] parts = line.split(",");
 
             // TODO: print out the date and perc_sequences for the selected lines
+            if (country.equals(parts[0]) && variant.equals(parts[2])) {
+                System.out.println(parts[1] + "," + parts[4]);
+            }
         }
         inputFileNameStream.close();
     }
