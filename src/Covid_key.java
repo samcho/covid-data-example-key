@@ -21,7 +21,7 @@ public class Covid_key {
         // ignore first line
         inputFileNameScanner.nextLine();
 
-        // TODO: obtain parsing keywords (country, variant) for selecting lines
+        // Obtain parsing keywords (country, variant) for selecting lines
         System.out.println("Which country?: ");
         String country = scnr.nextLine();
 
@@ -32,7 +32,7 @@ public class Covid_key {
             String line = inputFileNameScanner.nextLine();
             String[] parts = line.split(",");
 
-            // TODO: print out the date and perc_sequences for the selected lines
+            // Print out the date and perc_sequences for the selected lines
             if (country.equals(parts[0]) && variant.equals(parts[2])) {
                 System.out.println(parts[1] + "," + parts[4]);
             }
